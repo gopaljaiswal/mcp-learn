@@ -74,7 +74,7 @@ async def mcp_endpoint(request: Request):
                 "id": req_id,
                 "result": {
                     "capabilities": {"tools": True},
-                    "serverInfo": {"name": "BOQ MCP Server", "version": "1.0.0"},
+                    "serverInfo": {"name": "A Demo MCP Server", "version": "1.0.0"},
                 },
             }
         )
