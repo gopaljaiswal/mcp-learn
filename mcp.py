@@ -1,3 +1,13 @@
+# -------------------------------
+# REST API to get all tools
+# -------------------------------
+@app.get("/tools")
+async def get_tools():
+    tools_list = [
+        {"name": name, "description": tool["description"], "inputSchema": tool["schema"]}
+        for name, tool in TOOLS.items()
+    ]
+    return {"tools": tools_list}
 import json
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
